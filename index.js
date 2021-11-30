@@ -1,8 +1,8 @@
-const increment = () => {
-    let countValue = document.querySelector('#counter').innerText
-    document.querySelector('#counter').innerText = Number(countValue) + 1
-}
+let counter = 0;
+const counterElement = document.querySelector("#counter");
+const button = document.querySelector("#inc-button");
 
-increment()
-increment()
-increment()
+button.addEventListener("click", () => {
+  counter += 1;
+  counterElement.innerText = counter;
+});

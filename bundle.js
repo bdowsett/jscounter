@@ -1,10 +1,10 @@
 (() => {
   // index.js
-  var increment = () => {
-    let countValue = document.querySelector("#counter").innerText;
-    document.querySelector("#counter").innerText = Number(countValue) + 1;
-  };
-  increment();
-  increment();
-  increment();
+  var counter = 0;
+  var counterElement = document.querySelector("#counter");
+  var button = document.querySelector("#inc-button");
+  button.addEventListener("click", () => {
+    counter += 1;
+    counterElement.innerText = counter;
+  });
 })();
